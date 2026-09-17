@@ -1,0 +1,344 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOskiLAsaNUv1HsSFZyJ41i",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/25pa1a45a0-cmyk/python/blob/main/Dictionaries.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Tea6Sm1HuJSR",
+        "outputId": "be92c47c-0368-47b4-ef5f-ab64a5ddec1b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "d={}\n",
+        "print(type(d))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dic=dict(ai=90,ml=120) #Using dict constructor used to initialise objects\n",
+        "print(type(dic))\n",
+        "print(dic)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0Aa3srMYuUai",
+        "outputId": "d20929fd-90e5-4e2e-e7b6-7da75781b903"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n",
+            "{'ai': 90, 'ml': 120}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d={\"name\":\"Sri\",\"age\":20,\"grade\":9.65,\"regdno\":100}\n",
+        "print(d)"
+      ],
+      "metadata": {
+        "id": "y9g8oD6qumA5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "75bdb6c4-920f-4c29-a2bb-774795f35ab5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Sri', 'age': 20, 'grade': 9.65, 'regdno': 100}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Accessing Keys in dictionary through Iteration\n",
+        "for i in d:     #i will be automatically iterate throgh keys\n",
+        "  print(i)   #OR\n",
+        "  #for i in d.keys:\n",
+        "  #print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k6LiADMwc-ab",
+        "outputId": "0e041863-e4b5-4591-e37a-14a9d8d482f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "name\n",
+            "age\n",
+            "grade\n",
+            "regdno\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accessing Values in dictionary through Iteration\n",
+        "for i in d:\n",
+        "  print(d[i])\n",
+        "  #OR\n",
+        "  #for i in d.values:\n",
+        "  #print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zUpo5WXWdR0a",
+        "outputId": "3e386323-3e77-4e56-c269-7f1671e47512"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sri\n",
+            "20\n",
+            "9.65\n",
+            "100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Accessing both key values pairs through iteration\n",
+        "for i in d:\n",
+        "  print(i,\":\",d[i])\n",
+        "  #OR\n",
+        "  #for i in d.items:\n",
+        "  #print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_Gqp1VWtdjX_",
+        "outputId": "820afd20-44e8-4909-9f5c-cfef24af95f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "name : Sri\n",
+            "age : 20\n",
+            "grade : 9.65\n",
+            "regdno : 100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Structure for keys,values and items\n",
+        "x=d.keys\n",
+        "print(x)\n",
+        "print(type(x))\n",
+        "print(list[x])\n",
+        "y=list[d.values]\n",
+        "print(y)\n",
+        "z=d.items\n",
+        "print(list[z])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jb52zj-Sdt4X",
+        "outputId": "f1f17116-46b4-4316-98fb-01edd7a8d03b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<built-in method keys of dict object at 0x7ddf454fc4c0>\n",
+            "<class 'builtin_function_or_method'>\n",
+            "list[<built-in method keys of dict object at 0x7ddf454fc4c0>]\n",
+            "list[<built-in method values of dict object at 0x7ddf454fc4c0>]\n",
+            "list[<built-in method items of dict object at 0x7ddf454fc4c0>]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d[\"grade\"]=9.70\n",
+        "print(d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zS49l1rVe9RE",
+        "outputId": "6cf726c7-6b49-447d-a8c0-4bfd5c204346"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Sri', 'age': 20, 'grade': 9.7, 'regdno': 100}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d.update({\"wgh\":45})\n",
+        "print(d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "btAXyEiKfEM5",
+        "outputId": "27753d8b-46a6-44ff-cafe-bacd08b78d30"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Sri', 'age': 20, 'grade': 9.7, 'regdno': 100, 'wgh': 45}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#DICTIONARY COMPREHENSION\n",
+        "#Syntax:p=dict(i for i in range input().split())\n",
+        "#Example\n",
+        "k=dict((i,i**2) for i in range(1,5))\n",
+        "print(k)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xPE5du84fO3O",
+        "outputId": "7d70f141-ed7c-4a1b-9ce1-e280a2ca79fc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1: 1, 2: 4, 3: 9, 4: 16}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#USER DEFINED KEYS VALUES TO GET DICTIONARY\n",
+        "k=[i for i in input().split()]\n",
+        "v=[(i) for i in input().split()]\n",
+        "p={i:j for i,j in zip(k,v)}\n",
+        "print(p)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "89Mj7YMTfzAm",
+        "outputId": "44af9fa1-15ba-4e0e-d5d4-245ca3b74f03"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "name age gender do\n",
+            "srav 20 female 30/04/2008\n",
+            "{'name': 'srav', 'age': '20', 'gender': 'female', 'do': '30/04/2008'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "KG59vQbLiGfi"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
